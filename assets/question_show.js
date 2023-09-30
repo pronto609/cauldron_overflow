@@ -9,7 +9,7 @@ $container.find('a').on('click', function (e) {
     let $link = $(e.currentTarget);
 
     $.ajax({
-        url: 'comments/10/vote/' + $link.data('direction'),
+        url: '/comments/10/vote/' + $link.data('direction'),
         method: 'POST'
     }).then(function (response) {
         $container.find('.js-vote-total').text(response.votes);
